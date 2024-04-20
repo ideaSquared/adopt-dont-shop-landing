@@ -1,0 +1,43 @@
+body {
+  background: url('/pexels-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  /* Ensures there's no default margin around the body */
+  overflow: hidden;
+  /* Keeps the pseudo-element within the body */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  /* Adjust opacity to control dimming, 0.5 is 50% dimming */
+  z-index: -1;
+  /* Ensures the overlay is behind the content */
+}
+
+.logo-image {
+  width: 20%;
+  /* Set as needed */
+  height: auto;
+  /* Adjust spacing as needed */
+  display: block;
+}
+
+.small-text {
+  font-size: 0.8rem;
+}
+
+.transparent-card {
+  background: rgba(255, 255, 255, 0.3);
+  /* Adjust opacity as needed */
+  border: none;
+  border-radius: 0.5rem;
+  padding: 20px;
+}
